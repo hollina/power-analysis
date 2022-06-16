@@ -4,7 +4,7 @@ Bernard Black, Alex Hollingsworth, Leticia Nunes, and Kosali Simon
 Journal of Public Economics
 
 You can cite this replication package using zenodo, where an archival version of this repository is stored. 
- [![DOI](https://zenodo.org/badge/XXX.svg)](XXX)
+ [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.6653213.svg)](https://doi.org/10.5281/zenodo.6653213)
  
 ## Overview
 -------------
@@ -19,9 +19,9 @@ The majority of this time is spent on the many power simulations reported in Tab
 
 **Note**: The github version of this replication package only contains the code and output. The zenodo version of this replication package contains all publicly available raw data and data used in analysis (as well as the code). 
 
-The zenodo replication package is available here: XXX
+The zenodo replication package is available here: https://doi.org/10.5281/zenodo.6653213
 
-The github version (only code and output) is available here: XXX
+The github version (only code and output) is available here: https://github.com/hollina/power-analysis
 
 
 ## Data availability statement
