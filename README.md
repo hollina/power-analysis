@@ -11,11 +11,11 @@ You can cite this replication package using zenodo, where an archival version of
 
 The code and data in this replication package will replicate all tables and figures from raw data using Stata, R, and a few unix shell commands. 
 
-The entire project can be replicated by opening the stata project file `simulated-power-analysis.stpr` and then by running the `scripts/0_run_all.do` do file. This file will also run the necessary R code. The paper can be rebuilt using the latex file `latex/manuscript.tex`. 
+The entire project can be replicated by opening the stata project file `power-analysis.stpr` and then by running the `scripts/0_run_all.do` do file. This file will also run the necessary R code. The paper can be rebuilt using the latex file `latex/manuscript.tex`. 
 
-Using nodes on Indiana University's supercomputer Carbonate (https://kb.iu.edu/d/aolp), the entire replication takes around three days. Each requested node had 16 GB of RAM and 4 cores from a 12-core Intel Xeon E5-2680 v3 CPUs. If line 51 is set to 1, `global carbonate 1`, then the power analysis will be set to run on Carbonate. If line 51 is set to zero `global carbonate 0` then the power analysis will be done in serial rather than submitted as jobs on Carbonate be run in parallel. 
+Using nodes on Indiana University's supercomputer Carbonate (https://kb.iu.edu/d/aolp), the entire replication takes around three days. Each requested node had 16 GB of RAM and 4 cores from a 12-core Intel Xeon E5-2680 v3 CPUs. If line 51 is set to 1, `global carbonate 1`, then the power analysis will be set to run on Carbonate. If line 51 is set to zero `global carbonate 0` then the power analysis will be done in serial rather than as submitted jobs on Carbonate run in parallel. 
 
-The majority of this time is spent on the many power simulations reported in Table 2. In `scripts/0_run_all.do`, the user can choose to not run the power analyses code by altering line 47 to be `global slow_code 0`. If this is done the entire replication will take around than 3 hours. 
+The majority of this time is spent on the many power simulations reported in Table 3. In `scripts/0_run_all.do`, the user can choose to not run the power analyses code by altering line 47 to be `global slow_code 0`. If this is done the entire replication will take around than 3 hours. 
 
 **Note**: The github version of this replication package only contains the code and output. The zenodo version of this replication package contains all publicly available raw data and data used in analysis (as well as the code). 
 
@@ -26,7 +26,7 @@ The github version (only code and output) is available here: XXX
 
 ## Data availability statement
 
-**Note**: The mortality data are available from the Centers for Disease Control but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. More information about these data can be found here, https://www.cdc.gov/nchs/nvss/dvs_data_release.htm. 
+**Note**: The mortality data are available from the Centers for Disease Control but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. More information about these data can be found here, https://www.cdc.gov/nchs/nvss/dvs_data_release.htm. Email Alex if you have any questions about accessing the data. 
 
 All other data are contained in the zenodo repository. 
 
@@ -64,4 +64,5 @@ All other data are contained in the zenodo repository.
 The provided code reproduces all tables, figures, and results in the paper. 
 
 ## Acknowledgements
+
 This code is based on AEA data editor's readme guidelines. (https://aeadataeditor.github.io/posts/2020-12-08-template-readme). Some content on this page was copied from [Hindawi](https://www.hindawi.com/research.data/#statement.templates). Other content was adapted  from [Fort (2016)](https://doi.org/10.1093/restud/rdw057), Supplementary data, with the author's permission. 
