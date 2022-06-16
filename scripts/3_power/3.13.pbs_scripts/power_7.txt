@@ -1,0 +1,13 @@
+#!/bin/bash
+#####  Constructed by HPC everywhere #####
+#PBS -M hollinal@iu.edu
+#PBS -l nodes=1:ppn=4,walltime=0:23:59:00
+#PBS -l vmem=16gb
+#PBS -m abe
+#PBS -N power_7
+#PBS -j oe
+######  Module commands #####
+module load stata
+######  Job commands go below this line #####
+cd /N/project/Simon_HealthEcProj1/simulated-power-analysis/scripts/3_power/3.13.pbs_scripts
+stata-mp do power_7.do

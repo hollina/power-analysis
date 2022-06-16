@@ -1,0 +1,861 @@
+* 00000019
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://fmwww.bc.edu/repec/bocode/b
+N blindschemes.pkg
+D 15 Feb 2021
+U 1
+d 'BLINDSCHEMES': module to provide graph schemes sensitive to color vision deficiency
+d 
+d  While Stata's computational capabilities have intensively
+d increased over the last decade, the quality of its default figure
+d schemes is still a matter of debate amongst users. Clearly some
+d of the arguments speaking against Stata figures are subject to
+d individual taste, but others are not, such as for instance:
+d horizontal labelling, unnecessary background tinting, missing
+d gridlines, oversized markers. The two schemes introduced here
+d attempt to solve the major shortcomings of Stata's default figure
+d schemes.  The schemes come with 21 new colors, of which seven
+d colors are distinguishable for people suffering from color
+d blindness.  This package provides users with four new figure
+d schemes: plotplain (plain and simple plotting environment, avoids
+d chartjunk); plotplainblind (plain and simple plotting
+d environment, avoids chartjunk + colorblind friendly); plottig
+d (replicates R ggplot in most regards); plottigblind (replicates R
+d ggplot in most regards + colorblind friendly)
+d 
+d KW: graphics
+d KW: schemes
+d KW: color vision deficiency
+d KW: color blindness
+d KW: chartjunk
+d 
+d Requires: Stata version 12
+d 
+d Distribution-Date: 20200807
+d 
+d Author: Daniel Bischof, University of Zurich
+d Support: email bischof@@ipz.uzh.ch
+d 
+f b/blindschemes.sthlp
+f s/scheme-plotplain.scheme
+f s/scheme-plotplainblind.scheme
+f s/scheme-plottig.scheme
+f s/scheme-plottigblind.scheme
+f p/plotplain.sthlp
+f p/plotplainblind.sthlp
+f p/plottig.sthlp
+f p/plottigblind.sthlp
+f style/color-vermillion.style
+f style/color-sky.style
+f style/color-reddish.style
+f style/color-orangebrown.style
+f style/color-ananas.style
+f style/color-turquoise.style
+f style/color-sea.style
+f style/color-plb1.style
+f style/color-plb2.style
+f style/color-plb3.style
+f style/color-plg1.style
+f style/color-plg2.style
+f style/color-plg3.style
+f style/color-pll1.style
+f style/color-pll2.style
+f style/color-pll3.style
+f style/color-plr1.style
+f style/color-plr2.style
+f style/color-ply1.style
+f style/color-ply2.style
+f style/color-ply3.style
+e
+S http://fmwww.bc.edu/repec/bocode/g
+N gtools.pkg
+D 15 Feb 2021
+U 2
+d 'GTOOLS': module to provide a fast implementation of common group commands
+d 
+d    gtools is a Stata package that provides a fast implementation
+d of common group commands like    collapse, egen, isid, levelsof,
+d contract, distinct, and so on using C plugins for a massive
+d speed improvement.
+d 
+d KW:  data management
+d KW: collapse
+d KW: egen
+d KW: isid
+d KW: levelsof
+d KW: contract
+d KW: distinct
+d KW: plugins
+d KW: hash
+d 
+d Requires: Stata version 13.1
+d 
+d Distribution-Date: 20190403
+d 
+d Author: Mauricio Caceres Bravo
+d Support: email mauricio.caceres.bravo@@gmail.com
+d 
+f g/gtools.ado
+f g/gtools.sthlp
+f _/_gtools_internal.ado
+f _/_gtools_internal.mata
+f f/fasterxtile.ado
+f f/fasterxtile.sthlp
+f g/gcollapse.ado
+f g/gcollapse.sthlp
+f g/gcontract.ado
+f g/gcontract.sthlp
+f g/gdistinct.ado
+f g/gdistinct.sthlp
+f g/gduplicates.ado
+f g/gduplicates.sthlp
+f g/gegen.ado
+f g/gegen.sthlp
+f g/gisid.ado
+f g/gisid.sthlp
+f g/glevelsof.ado
+f g/glevelsof.sthlp
+f g/gquantiles.ado
+f g/gquantiles.sthlp
+f g/greshape.ado
+f g/greshape.sthlp
+f g/gstats.ado
+f g/gstats.sthlp
+f g/gstats_sum.sthlp
+f g/gstats_summarize.sthlp
+f g/gstats_tab.sthlp
+f g/gstats_winsor.sthlp
+f g/gtools_macosx_v2.plugin
+f g/gtools_macosx_v3.plugin
+f g/gtools_unix_v2.plugin
+f g/gtools_unix_v3.plugin
+f g/gtools_windows_v2.plugin
+f g/gtools_windows_v3.plugin
+f g/gtop.ado
+f g/gtop.sthlp
+f g/gtoplevelsof.ado
+f g/gtoplevelsof.sthlp
+f g/gunique.ado
+f g/gunique.sthlp
+f h/hashsort.ado
+f h/hashsort.sthlp
+f l/lgtools.mlib
+e
+S http://fmwww.bc.edu/repec/bocode/c
+N carryforward.pkg
+D 15 Feb 2021
+U 3
+d 'CARRYFORWARD': module to carry forward previous observations
+d 
+d  carryforward will carry values forward from one observation to
+d the next, filling in missing values with the previous value. This
+d is not intended for imputing missing values; it is regarded as a
+d bad choice for missing-value imputation. The intent is, rather,
+d to fill in "holes", where a value should  naturally prevail from
+d one observation to the next. The holes may be artifacts of data
+d management operations such as merging.
+d 
+d KW: carryforward
+d KW: carry
+d KW: forward
+d KW: missing
+d KW: fill
+d KW: replace
+d KW: cascade
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20160212
+d 
+d Author: David Kantor
+d Support: email  kantor.d@@att.net
+d 
+f c/carryforward.ado
+f c/carryforward.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/e
+N estout.pkg
+D 15 Feb 2021
+U 4
+d 'ESTOUT': module to make regression tables
+d 
+d  estout produces a table of regression results from one or
+d several models for use with spreadsheets, LaTeX, HTML, or a
+d word-processor table. eststo stores a quick copy of the active
+d estimation results for later tabulation. esttab is a wrapper for
+d estout. It displays a pretty looking publication-style regression
+d table without much typing. estadd adds additional results to the
+d e()-returns for one or several models previously fitted and
+d stored. This package subsumes the previously circulated esto,
+d esta, estadd,  and estadd_plus. An earlier version of estout is
+d available  as estout1.
+d 
+d KW: estimates
+d KW: LaTeX
+d KW: HTML
+d KW: word processor
+d KW: output
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20190613
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f _/_eststo.ado
+f _/_eststo.hlp
+f e/estadd.ado
+f e/estadd.hlp
+f e/estout.ado
+f e/estout.hlp
+f e/eststo.ado
+f e/eststo.hlp
+f e/estpost.ado
+f e/estpost.hlp
+f e/esttab.ado
+f e/esttab.hlp
+e
+S https://raw.githubusercontent.com/sergiocorreia/ftools/master/src
+N ftools.pkg
+D 15 Feb 2021
+U 5
+d ftools. Alternatives to common Stata commands optimized for large datasets
+d 
+d Author: Sergio Correia. Board of Governors of the Federal Reserve
+d Support: sergio.correia@gmail.com
+d 
+d ftools consists of a Mata file and several Stata commands:
+d 
+d The Mata file creates identifiers (factors) from variables by using
+d hash functions instead of sorting the data, so it runs in time O(N)
+d and not in O(N log N).
+d 
+d The Stata commands exploit this to avoid -sort- operations,
+d at the cost of being slower for small datasets (mainly because of the
+d cost involved in moving data from Stata to Mata).
+d 
+d Implemented commands are fcollapse, fegen group, and fsort.
+d Note that most of the capabilities of -levels- and -contract-
+d are already supported by these commands.
+d 
+d Possible commands include more -egen- functions and -merge- and
+d -reshape- alternatives.
+d 
+d KW: factor variables
+d KW: levels
+d KW: mata
+d KW: collapse
+d KW: contract
+d KW: egen
+d KW: merge
+d KW: levelsof
+d KW: sort
+d KW: inlist
+d 
+d Requires: Stata version 11.2
+d (Stata 12 or older also require the boottest package from ssc)
+d 
+d Distribution-Date: 20191311
+d 
+f f/ftools.ado
+f f/ftools.sthlp
+f f/fcollapse.ado
+f f/fcollapse.sthlp
+f f/fsort.ado
+f f/fsort.sthlp
+f f/fisid.ado
+f f/fisid.sthlp
+f f/fegen.ado
+f f/fegen.sthlp
+f f/fegen_group.ado
+f j/join.ado
+f j/join.sthlp
+f f/fmerge.ado
+f f/fmerge.sthlp
+f f/flevelsof.ado
+f f/flevelsof.sthlp
+f l/local_inlist.ado
+f l/local_inlist.sthlp
+f f/ftools.mata
+f f/ftools_type_aliases.mata
+f f/ftools_common.mata
+f f/ftools_main.mata
+f f/ftools_hash1.mata
+f f/ftools_plugin.mata
+f f/fcollapse_main.mata
+f f/fcollapse_functions.mata
+f m/ms_compile_mata.ado
+f m/ms_get_version.ado
+f m/ms_fvunab.ado
+f m/ms_parse_absvars.ado
+f m/ms_parse_varlist.ado
+f m/ms_parse_vce.ado
+f m/ms_expand_varlist.ado
+f m/ms_add_comma.ado
+f m/ms_fvstrip.ado
+f m/ms_fvstrip.sthlp
+f f/ftab.ado
+e
+S https://raw.githubusercontent.com/sergiocorreia/reghdfe/master/src
+N reghdfe.pkg
+D 15 Feb 2021
+U 6
+d REGHDFE: Linear models with multi-way fixed effects and multi-way clustering
+d 
+d Author: Sergio Correia. Board of Governors of the Federal Reserve System
+d Support: sergio.correia@gmail.com
+d 
+d reghdfe fits a linear or instrumental-variable/GMM regression absorbing an arbitrary number of categorical factors and factorial interactions
+d Optionally, it saves the estimated fixed effects.
+d 
+d The estimator employed is described in Correia (2017):
+d http://scorreia.com/research/hdfe.pdf
+d 
+d For details (user guide, help, FAQ), see the website:
+d http://scorreia.com/reghdfe/
+d 
+d KW: fixed effects
+d KW: panel data
+d KW: hdfe
+d KW: areg
+d KW: xtreg
+d KW: MWFE
+d KW: MWC
+d KW: cluster
+d 
+d Requires: Stata version 11.2
+d 
+d Required packages:
+d  ftools
+d  boottest (for Stata version 12 or earlier)
+d 
+d Distribution-Date: 20191227
+d 
+f r/reghdfe.ado
+f r/reghdfe_parse.ado
+f r/reghdfe_estat.ado
+f r/reghdfe_header.ado
+f r/reghdfe_footnote.ado
+f r/reghdfe_p.ado
+f r/reghdfe.mata
+f r/reghdfe_bipartite.mata
+f r/reghdfe_class.mata
+f r/reghdfe_constructor.mata
+f r/reghdfe_common.mata
+f r/reghdfe_projections.mata
+f r/reghdfe_transforms.mata
+f r/reghdfe_accelerations.mata
+f r/reghdfe_lsmr.mata
+f r/reghdfe.sthlp
+f r/reghdfe_mata.sthlp
+f e/estfe.ado
+f r/reghdfe_old.ado
+f r/reghdfe_old_estat.ado
+f r/reghdfe_old_footnote.ado
+f r/reghdfe_old_p.ado
+f r/reghdfe_old.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/m
+N moremata.pkg
+D 15 Feb 2021
+U 7
+d 'MOREMATA': module (Mata) to provide various functions
+d 
+d  This package includes various Mata functions. kern(): various
+d kernel functions; kint(): kernel integral functions; kdel0():
+d canonical bandwidth of kernel; quantile(): quantile function;
+d median(): median; iqrange(): inter-quartile range; ecdf():
+d cumulative distribution function; relrank(): grade
+d transformation; ranks(): ranks/cumulative frequencies; freq():
+d compute frequency counts; histogram(): produce histogram data;
+d mgof(): multinomial goodness-of-fit tests; collapse(): summary
+d statistics by subgroups; _collapse(): summary statistics by
+d subgroups; gini(): Gini coefficient; sample(): draw random
+d sample; srswr(): SRS with replacement; srswor(): SRS without
+d replacement; upswr(): UPS with replacement; upswor(): UPS without
+d replacement; bs(): bootstrap estimation; bs2(): bootstrap
+d estimation; bs_report(): report bootstrap results; jk():
+d jackknife estimation; jk_report(): report jackknife results;
+d subset(): obtain subsets, one at a time; composition(): obtain
+d compositions, one by one; ncompositions(): determine number of
+d compositions; partition(): obtain partitions, one at a time;
+d npartitionss(): determine number of partitions; rsubset(): draw
+d random subset; rcomposition(): draw random composition; greedy():
+d one-to-one and one-to-many matching; ebal(): entropy balancing
+d (Stata 11 required); colvar(): variance, by column; meancolvar():
+d mean and variance, by column; variance0(): population variance;
+d meanvariance0(): mean and population variance; mse(): mean
+d squared error; colmse(): mean squared error, by column; sse():
+d sum of squared errors; colsse(): sum of squared errors, by
+d column; benford(): Benford distribution; cauchy(): cumulative
+d Cauchy-Lorentz dist.; cauchyden(): Cauchy-Lorentz density;
+d cauchytail(): reverse cumulative Cauchy-Lorentz; invcauchy():
+d inverse cumulative Cauchy-Lorentz; rbinomial(): generate binomial
+d random numbers; cebinomial(): cond. expect. of binomial r.v.;
+d root(): Brent's univariate zero finder; nrroot(): Newton-Raphson
+d zero finder; finvert(): univariate function inverter;
+d integrate_sr(): univariate function integration (Simpson's rule);
+d integrate_38(): univariate function integration (Simpson's 3/8
+d rule); ipolate(): linear interpolation; polint(): polynomial
+d inter-/extrapolation; sqrt(): square root of a symmetric positive
+d definite matrix; plot(): Draw twoway plot; _plot(): Draw twoway
+d plot; panels(): identify nested panel structure; _panels():
+d identify panel sizes; npanels(): identify number of panels;
+d nunique(): count number of distinct values; nuniqrows(): count
+d number of unique rows; isconstant(): whether matrix is constant;
+d nobs(): number of observations; colrunsum(): running sum of each
+d column; linbin(): linear binning; fastlinbin(): fast linear
+d binning; exactbin(): exact binning; makegrid(): equally spaced
+d grid points; cut(): categorize data vector; posof(): find element
+d in vector; which(): positions of nonzero elements; locate():
+d search an ordered vector; hunt(): consecutive search; cond():
+d matrix conditional operator; expand(): duplicate single
+d rows/columns; _expand(): duplicate rows/columns in place;
+d repeat(): duplicate contents as a whole; _repeat(): duplicate
+d contents in place; unorder2(): stable version of unorder();
+d jumble2(): stable version of jumble(); _jumble2(): stable version
+d of _jumble(); pieces(): break string into pieces; npieces():
+d count number of pieces; _npieces(): count number of pieces;
+d regexr(): regular expression replace; invtokens(): reverse of
+d tokens(); realofstr(): convert string into real; strexpand():
+d expand string argument; matlist(): display a (real) matrix;
+d insheet(): read spreadsheet file; infile(): read free-format
+d file; outsheet(): write spreadsheet file; callf(): pass optional
+d args to function; callf_setup(): setup for mm_callf().
+d 
+d KW: Mata
+d KW:  quantile
+d KW: median
+d KW: inter-quartile range
+d KW: integration
+d KW: cumulative distribution
+d KW: Cauchy distribution
+d KW: Cauchy-Lorentz distribution
+d KW: relative ranks
+d KW: running sum
+d KW: linear interpolation
+d KW: insheet
+d KW: infile
+d KW: outsheet
+d KW: spreadsheet
+d KW: tokens
+d KW: rowvector
+d KW: string
+d KW: real
+d KW: grid
+d KW: linear binning
+d KW: histogram
+d 
+d Requires: Stata version 9
+d 
+d Distribution-Date: 20201206
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f l/lmoremata.mlib
+f l/lmoremata10.mlib
+f l/lmoremata11.mlib
+f l/lmoremata14.mlib
+f m/mf_mm_sample.hlp
+f m/moremata.hlp
+f m/moremata_source.hlp
+f m/moremata10_source.hlp
+f m/moremata11_source.hlp
+f m/moremata14_source.hlp
+f m/mf_mm_unorder2.hlp
+f m/mf_mm_panels.hlp
+f m/mf_mm_quantile.hlp
+f m/mf_mm_strexpand.hlp
+f m/mf_mm_realofstr.hlp
+f m/mf_mm_posof.hlp
+f m/mf_mm_ipolate.hlp
+f m/mf_mm_invtokens.hlp
+f m/mf_mm_linbin.hlp
+f m/mf_mm_histogram.hlp
+f m/mf_mm_ecdf.hlp
+f m/mf_mm_colrunsum.hlp
+f m/mf_mm_rbinomial.hlp
+f m/mf_mm_insheet.hlp
+f m/mf_mm_cut.hlp
+f m/mf_mm_freq.hlp
+f m/mf_mm_colvar.hlp
+f m/mf_mm_gini.hlp
+f m/mf_mm_nunique.hlp
+f m/mf_mm_bs.hlp
+f m/mf_mm_callf.hlp
+f m/mf_mm_expand.hlp
+f m/mf_mm_finvert.hlp
+f m/mf_mm_greedy.hlp
+f m/mf_mm_jk.hlp
+f m/mf_mm_kern.hlp
+f m/mf_mm_locate.hlp
+f m/mf_mm_nobs.hlp
+f m/mf_mm_nrroot.hlp
+f m/mf_mm_polint.hlp
+f m/mf_mm_root.hlp
+f m/mf_mm_which.hlp
+f m/mf_mm_plot.hlp
+f m/mf_mm_pieces.hlp
+f m/mf_mm_benford.hlp
+f m/mf_mm_isconstant.hlp
+f m/mf_mm_mgof.hlp
+f m/mf_mm_subset.hlp
+f m/mf_mm_cauchy.hlp
+f m/mf_mm_matlist.hlp
+f m/mf_mm_cond.hlp
+f m/mf_mm_collapse.hlp
+f m/mf_mm_integrate.hlp
+f m/mf_mm_regexr.hlp
+f m/mf_mm_sqrt.hlp
+f m/mf_mm_ebal.sthlp
+f m/mf_mm_clip.hlp
+f m/mf_mm_ddens.hlp
+f m/mf_mm_density.sthlp
+f m/mf_mm_diff.hlp
+f m/mf_mm_group.hlp
+f m/mf_mm_minim.hlp
+f m/mf_mm_prod.hlp
+f m/mf_mm_ranks.hlp
+f m/mf_mm_relrank.hlp
+f m/mf_mm_seq.hlp
+f m/mf_mm_sort.hlp
+f m/mf_mm_hl.hlp
+f m/mf_mm_mloc.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/c
+N coefplot.pkg
+D 15 Feb 2021
+U 8
+d 'COEFPLOT': module to plot regression coefficients and other results
+d 
+d   coefplot plots results from estimation commands or Stata
+d matrices. Results from multiple models or matrices can be
+d combined in a single graph. The default behavior of coefplot is
+d to draw markers for coefficients and horizontal spikes for
+d confidence intervals. However, coefplot can also produce various
+d other types of graphs.
+d 
+d KW: graphics
+d KW: coefficients
+d KW: estimation
+d 
+d Requires: Stata version 11
+d 
+d Distribution-Date: 20201217
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f c/coefplot.ado
+f c/coefplot.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N statastates.pkg
+D 15 Feb 2021
+U 9
+d 'STATASTATES': module to add US state identifiers to dataset
+d 
+d  statastates is a simple Stata module for adding U.S. state
+d identifiers (abbreviation, name, and FIPS code) that may be
+d missing from your dataset.
+d 
+d KW: data management
+d KW: US states
+d 
+d Requires: Stata version 10
+d 
+d Distribution-Date: 20180110
+d 
+d Author: William L. Schpero, Yale University
+d Support: email william.schpero@@yale.edu
+d 
+f s/statastates.ado
+f s/statastates.sthlp
+f s/statastates_data.ado
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N shp2dta.pkg
+D 15 Feb 2021
+U 10
+d 'SHP2DTA': module to converts shape boundary files to Stata datasets
+d 
+d  shp2dta reads a shape (.shp) and dbase (.dbf) file from disk and
+d converts them into Stata datasets.  The shape and dbase files
+d must have the same name and be saved in the same directory.  The
+d user-written command tmap can use the two datasets that shp2dta
+d creates. shp2dta can convert only polygon shapefiles (type 5).
+d 
+d KW: tmap
+d KW: shape files
+d KW: maps
+d 
+d Requires: Stata version 9.1
+d 
+d Distribution-Date: 20150717
+d 
+d Author: Kevin Crow , StataCorp LP
+d Support: email kcrow@@stata.com
+d 
+f s/shp2dta.ado
+f s/shp2dta.hlp
+f s/shp2dta.dlg
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N sumup.pkg
+D 15 Feb 2021
+U 11
+d 'SUMUP': module to compute summary statistics by group
+d 
+d  sumup returns the same set of statistics than summarize,
+d computed by groups. sumup, table, tabstat, collapse have similar
+d functionalities, but sumup is ten times faster.
+d 
+d KW: statistics
+d KW: summary
+d KW: groups
+d 
+d Requires: Stata version 12.1
+d 
+d Distribution-Date: 20151231
+d 
+d Author: Matthieu Gomez, Princeton University
+d Support: email gomez.matthieu@@gmail.com
+d 
+f s/sumup.ado
+f s/sumup.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/d
+N distinct.pkg
+D 15 Feb 2021
+U 12
+d 'DISTINCT': module to display distinct values of variables
+d 
+d distinct displays the number of distinct values for each variable
+d in a varlist.  The varlist may include both numeric and string
+d variables.
+d 
+d KW: distinct observations
+d KW: unique values
+d 
+d Requires: Stata version 8.0
+d 
+d 
+d Author: Gary Longton, Fred Hutchinson Cancer Research Center
+d Support: email glongton@@fhcrc.org
+d 
+d Author: Nicholas J. Cox, Durham University
+d Support: email N.J.Cox@@durham.ac.uk
+d 
+d Distribution-Date: 20120321
+d 
+f d/distinct.ado
+f d/distinct.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/u
+N unique.pkg
+D 15 Feb 2021
+U 13
+d 'UNIQUE': module to report number of unique values in variable(s)
+d 
+d  The command unique without a by reports the number of unique
+d values for the varlist. With a by it does the same, but also
+d creates a new variable (_Unique by default but can be named in
+d the gen option). This new variable contains the number of unique
+d values of the varlist for each level of the by variable. The new
+d variable is coded missing except for the first record in each
+d group defined by the levels of the by variable. The command is
+d useful for exploring data where the records refer to more than
+d one level, for example longitudinal data where each record refers
+d to a visit by a subject.
+d 
+d 
+d Requires: Stata version 10.1
+d 
+d Distribution-Date: 20200618
+d 
+d Author: Tony Brady
+d Support: email tony@@sealedenvelope.com
+d 
+f u/unique.ado
+f u/unique.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/b
+N binscatter.pkg
+D 15 Feb 2021
+U 14
+d 'BINSCATTER': module to generate binned scatterplots
+d 
+d  binscatter generates binned scatterplots, and is optimized for
+d speed in large  datasets.  Binned scatterplots provide a
+d non-parametric way of visualizing the relationship between two
+d variables.  With a large number of observations, a scatterplot
+d that plots every data point would become too crowded to interpret
+d visually.  binscatter groups the x-axis variable into equal-sized
+d bins, computes the mean of the x-axis and y-axis variables within
+d each bin, then creates a scatterplot of these data points.  It
+d provides built-in options to control for covariates before
+d plotting the relationship.  It will also plot fit lines based on
+d the underlying data, and can automatically handle regression
+d discontinuities.
+d 
+d KW: scatterplot
+d KW: data description
+d KW: regression discontinuity
+d 
+d Requires: Stata version 12.1
+d 
+d Distribution-Date: 20131124
+d 
+d Author: Michael Stepner
+d Support: email michaelstepner@@gmail.com
+d 
+f b/binscatter.ado
+f b/binscatter.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/p
+N palettes.pkg
+D 15 Feb 2021
+U 15
+d 'PALETTES': module to provide color palettes, symbol palettes, and line pattern palettes
+d 
+d  The palettes module contains three commands: colorpalette,
+d symbolpalette, and linepalette. The commands provide color,
+d symbol, and line pattern palettes for use in Stata graphs.
+d 
+d KW: graphics
+d KW: colors
+d KW: marker symbols
+d KW: line patterns
+d 
+d Requires: Stata version 14.2 and colrspace from SSC (q.v.); (version 9.2 for colorpalette9)
+d 
+d Distribution-Date: 20200527
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f p/palettes.hlp
+f c/colorpalette.ado
+f c/colorpalette.sthlp
+f c/colorpalette9.ado
+f c/colorpalette9.hlp
+f l/linepalette.ado
+f l/linepalette.hlp
+f s/symbolpalette.ado
+f s/symbolpalette.hlp
+f l/lcolrspace.mlib
+e
+S http://fmwww.bc.edu/repec/bocode/c
+N colrspace.pkg
+D 15 Feb 2021
+U 16
+d 'COLRSPACE': module providing a class-based color management system in Mata
+d 
+d   The colrspace module provides a class-based color management
+d system implemented in Mata. It supports a wide variety of color
+d spaces and translations among them, provides color generators and
+d a large collection of named palettes, and features functionality
+d such as color interpolation, grayscale conversion, or color
+d vision deficiency simulation.
+d 
+d KW: graphics
+d KW: color management
+d 
+d Requires: Stata version 14.2
+d 
+d Distribution-Date: 20200606
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f c/colrspace.sthlp
+f c/colrspace_source.sthlp
+f c/colrspace_library_generators.sthlp
+f c/colrspace_library_matplotlib.sthlp
+f c/colrspace_library_namedcolors.sthlp
+f c/colrspace_library_palettes.sthlp
+f l/lcolrspace.mlib
+e
+S http://fmwww.bc.edu/repec/bocode/e
+N eret2.pkg
+D 16 Feb 2021
+U 17
+d 'ERET2': module to save results in e()
+d 
+d  eret2 saves a macro, scalar, or matrix in e()  and may be used
+d after any estimation command to add additional  results to the
+d e-returns. It is implemented as a wrapper for  ereturn. However,
+d eret2 can be used in any context whereas  ereturn can only be
+d used within an e-class program. Note that eret2 has essentially
+d been superseded by -estadd-, which offers a broader set of
+d capabilities.
+d 
+d KW: estimates
+d KW: eclass
+d KW: return
+d KW: results
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20050513
+d 
+d Author: Ben Jann, ETH Zurich
+d Support: email ben.jann@@soz.gess.ethz.ch
+d 
+f e/eret2.ado
+f e/eret2.hlp
+e
+S http://personalpages.manchester.ac.uk/staff/mark.lunt
+N pbalchk.pkg
+D 16 Feb 2021
+U 18
+d Propensity Balance Checking
+d 
+d Programs to test the balance achieved by a propensity model. If you
+d have multiply imputed data (imputed by ice or mi impute), use
+d mpbalchk. Otherwise, use pbalchk.
+d 
+d The programs below require the package {net search isvar:isvar} in order
+d to function correctly. Use the above link to install it if it is not
+d already installed.
+d 
+d The first time you run pbalchk or mpbalchk you will be asked if you
+d are prepared to send anonymous data to Google Analytics. For details
+d of the data sent, see the help file.
+d 
+d Author: Mark Lunt, Arthritis Research UK Epidemiology Unit, University of Manchester
+d Support: mark.lunt@manchester.ac.uk
+f p/pbalchk.ado
+f p/pbalchk.sthlp
+f m/mpbalchk.ado
+f m/mpbalchk.sthlp
+f c/covwt.ado
+f c/covwt.mo
+f t/trackuse.ado
+f u/uuidv4.ado
+f t/trackuse.sthlp
+f t/trackuse_prog.sthlp
+f g/ga_fragment.sthlp
+e
+S http://personalpages.manchester.ac.uk/staff/mark.lunt
+N ga_fragment.pkg
+D 15 Jun 2022
+U 19
+d The first time you run thisprog you will be asked if you
+d are prepared to send anonymous data to Google Analytics. For details
+d of the data sent, see the help file. I would appreciate it if you
+d would agree, but the programs will respect your decision if you choose
+d not to.
+d 
+f t/trackuse.ado
+f u/uuidv4.ado
+f t/trackuse.sthlp
+f t/trackuse_prog.sthlp
+f g/ga_fragment.sthlp
+e
